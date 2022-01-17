@@ -7,7 +7,7 @@ public class Java17 {
         c.execute();
     }
 
-    // JEP 409: Sealed Classes
+    // Sealed Classes
     public sealed interface Command permits LoginCommand, LogoutCommand, PluginCommand {
         void execute();
     }

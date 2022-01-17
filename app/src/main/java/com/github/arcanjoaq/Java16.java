@@ -3,14 +3,6 @@ package com.github.arcanjoaq;
 public class Java16 {
     // Records
 
-    record Point(int x, int y) { }
-
-    record LatLng (double lat, double lng) {
-        void print() {
-            System.out.printf("Lat: %f, Lng: %f%n", lat, lng);
-        }
-    }
-
     public static void main(String[] args) {
         // Records
         final Point p = new Point(10, 2);
@@ -28,8 +20,6 @@ public class Java16 {
         printVersion("java16");
     }
 
-
-
     static void print(Object obj) {
         // Pattern matching for instanceof
         if (obj instanceof String s) {
@@ -40,6 +30,15 @@ public class Java16 {
     static void printVersion(Object o) {
         if (o instanceof String s && s.length() > 5) {
             System.out.println(s.toUpperCase());
+        }
+    }
+
+    record Point(int x, int y) {
+    }
+
+    record LatLng(double lat, double lng) {
+        void print() {
+            System.out.printf("Lat: %f, Lng: %f%n", lat, lng);
         }
     }
 }

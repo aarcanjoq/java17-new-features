@@ -15,3 +15,9 @@ v7.4.0+ (https://docs.newrelic.com/docs/release-notes/agent-release-notes/java-r
 #### Lombok
 
 1.18.22+
+
+## Resources
+
+https://www.infoq.com/news/2021/12/minecrafts-jdk16-migration/
+
+https://www.infoq.com/presentations/new-java-16/

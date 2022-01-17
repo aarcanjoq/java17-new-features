@@ -3,11 +3,14 @@ package com.github.arcanjoaq;
 public class Java14 {
 
     public static void main(String[] args) {
+        // Switch Expressions
         System.out.println(getNumber(Day.WEDNESDAY));
+
+        // https://www.journaldev.com/37273/java-14-features#:~:text=3.%20Helpful%20NullPointerExceptions
+        //new Customer().getAddress().getStreet();
     }
 
     static int getNumber(final Day day) {
-        // Switch Expressions
         return switch (day) {
             case MONDAY, FRIDAY, SUNDAY -> {
                 System.out.println("Value: 6");
@@ -18,7 +21,7 @@ public class Java14 {
                 yield 7;
             }
             case THURSDAY, SATURDAY -> 8;
-            case WEDNESDAY-> {
+            case WEDNESDAY -> {
                 System.out.println("Value: 9");
                 yield 9;
             }
@@ -27,6 +30,26 @@ public class Java14 {
         };
     }
 
-    // Remove the Concurrent Mark Sweep (CMS) Garbage Collector: -XX:+UseConcMarkSweepGC
+    static class Customer {
+        private String name;
+        private Address address;
+
+        public String getName() {
+            return this.name;
+        }
+
+        public Address getAddress() {
+            return this.address;
+        }
+
+        static class Address {
+            private String street;
+
+            public String getStreet() {
+                return this.street;
+            }
+        }
+    }
+
 
 }

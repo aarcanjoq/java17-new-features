@@ -7,22 +7,22 @@ import javax.script.ScriptException;
 public class Java15 {
 
     public static void main(String[] args) throws ScriptException {
-        //JEP 378: Text Blocks
+        // Text Blocks
         final String html = """
-                  <html>
-                      <body>
-                          <p>Hello, World</p>
-                      </body>
-                  </html>
-                  """;
+                <html>
+                    <body>
+                        <p>Hello, World</p>
+                    </body>
+                </html>
+                """;
         System.out.println(html);
 
-        //JEP 372: Remove the Nashorn JavaScript Engine
+        // Remove the Nashorn JavaScript Engine
         final ScriptEngine nashorn = new ScriptEngineManager()
                 .getEngineByName("Nashorn");
         System.out.println(nashorn);
 
-        // JSR 223 javax.script API
+        // javax.script API
         final ScriptEngine groovy = new ScriptEngineManager()
                 .getEngineByName("groovy");
         System.out.println(groovy);

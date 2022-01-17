@@ -11,7 +11,7 @@ import java.time.Duration;
 public class Java11 {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        // JEP 327: Unicode 10
+        // Unicode 10
 
         // https://www.fileformat.info/info/unicode/char/1f92a/index.htm
 
@@ -21,14 +21,19 @@ public class Java11 {
 
         System.out.println("\uD83D\uDC7B of Tsushima");
 
-        // JEP 321: HTTP Client (Standard)
+        // HTTP Client (Standard)
         executeHttpRequest();
 
-        // JEP 332: Transport Layer Security (TLS) 1.3
+        // Transport Layer Security (TLS) 1.3
+        // https://mkyong.com/java/what-is-new-in-java-11/#:~:text=JVMTM%20Tool%20Interface-,14.%20JEP%20332%3A%20Transport%20Layer%20Security%20(TLS)%201.3,-Java%2011%20supports
 
-        //12. JEP 330: Launch Single-File Source-Code Programs
+        // Launch Single-File Source-Code Programs
+        // https://mkyong.com/java/what-is-new-in-java-11/#:~:text=Poly1305%20encryption%20examples-,12.%20JEP%20330%3A%20Launch%20Single%2DFile%20Source%2DCode%20Programs,-This%20Single%2DFile
 
         // #!/usr/lib/jvm/java-11-openjdk-amd64/bin/java --source 11
+
+        // Flight Recorder
+        // https://mkyong.com/java/what-is-new-in-java-11/#:~:text=Unicode%20in%20Java-,10.%20JEP%20328%3A%20Flight%20Recorder,-Java%20Flight%20Recorder
     }
 
     static void executeHttpRequest() throws IOException, InterruptedException {
