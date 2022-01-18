@@ -1,9 +1,12 @@
 package com.github.arcanjoaq;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Java16 {
     // Records
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
         // Records
         final Point p = new Point(10, 2);
         System.out.println(p.x());
@@ -12,8 +15,16 @@ public class Java16 {
         final LatLng sp = new LatLng(-23.533773, -46.625290);
         sp.print();
 
+        // https://www.latlong.net/place/liverpool-the-uk-28017.html
         final LatLng liverpool = new LatLng(53.400002, -2.983333);
         liverpool.print();
+
+        final LatLng oxford = new ObjectMapper() // Jackson 2.12+
+                .readValue("{ \"lat\": 51.752022, \"lng\": -1.257677 }", LatLng.class);
+        oxford.print();
+
+        final String jsonString = new ObjectMapper().writeValueAsString(liverpool);
+        System.out.println(jsonString);
 
         // Pattern matching for instanceof
         print("Foo");

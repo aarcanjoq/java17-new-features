@@ -25,9 +25,15 @@ public class Java8 {
         final LocalTime localTime = LocalTime.now();
         final ZonedDateTime zonedDateTime = localDate.atTime(localTime)
                 .atZone(ZoneId.systemDefault());
+        final LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
+        final OffsetDateTime offsetDateTime = zonedDateTime.toOffsetDateTime();
+        final ZonedDateTime utc = zonedDateTime.withZoneSameInstant(ZoneId.of("UTC"));
         System.out.println(instant);
         System.out.println(localDate);
         System.out.println(zonedDateTime);
+        System.out.println(localDateTime);
+        System.out.println(offsetDateTime);
+        System.out.println(utc);
     }
 
     interface Config extends Serializable {

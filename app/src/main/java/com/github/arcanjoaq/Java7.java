@@ -1,12 +1,35 @@
 package com.github.arcanjoaq;
 
+import java.io.*;
+import java.sql.SQLException;
+import java.text.ParseException;
+import java.util.Objects;
+
 public class Java7 {
     public static void main(String[] args) {
+
+        final String file = Objects.requireNonNull(Java7.class.getClassLoader().getResource("file.txt")).getFile();
+
         // The try-with-resources
+        try (final FileInputStream fileInputStream = new FileInputStream(file)) {
+            final byte[] bytes = fileInputStream.readAllBytes();
+            final String s = new String(bytes);
+            System.out.println(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         // Catching Multiple Exceptions by single catch
+        try {
+            throwsException();
+        } catch (SQLException | ParseException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            e.printStackTrace();
+        }
 
-        // String in switch statement (Java 7)
+        // String in switch statement
         final String country = "UK";
         switch (country) {
             case "BR": {
@@ -27,4 +50,6 @@ public class Java7 {
             }
         }
     }
+
+    public static void throwsException() throws SQLException, ParseException, InterruptedException {}
 }

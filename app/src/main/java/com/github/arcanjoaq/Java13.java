@@ -1,6 +1,7 @@
 package com.github.arcanjoaq;
 
 public class Java13 {
+    public enum Day {SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY}
 
     public static void main(String[] args) {
         System.out.println(getNumber(Day.WEDNESDAY));

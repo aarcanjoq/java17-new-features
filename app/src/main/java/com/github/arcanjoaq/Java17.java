@@ -28,7 +28,15 @@ public class Java17 {
         }
     }
 
-    static final class PluginCommand implements Command {
+    static non-sealed class PluginCommand implements Command {
+
+        @Override
+        public void execute() {
+            System.out.println("plugin");
+        }
+    }
+
+    static class MyPluginCommand extends PluginCommand {
 
         @Override
         public void execute() {

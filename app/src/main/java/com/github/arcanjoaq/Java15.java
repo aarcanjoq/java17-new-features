@@ -21,6 +21,13 @@ public class Java15 {
         final ScriptEngine nashorn = new ScriptEngineManager()
                 .getEngineByName("Nashorn");
         System.out.println(nashorn);
+//        System.out.println(nashorn.eval("""
+//                var x = function(y) {
+//                    return y * 2
+//                };
+//                x(10)
+//                """));
+
 
         // javax.script API
         final ScriptEngine groovy = new ScriptEngineManager()
