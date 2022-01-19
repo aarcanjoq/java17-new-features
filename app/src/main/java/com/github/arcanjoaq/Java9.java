@@ -18,6 +18,17 @@ public class Java9 {
         System.out.println(map);
 
         // JShell
+
+        // Remote debug
+
+        // Java 1-3: -Xnoagent -Djava.compiler=NONE -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+
+        // Java 4: -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+
+        // Java 5-8: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
+
+        // Java 9+: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=127.0.0.1:8000
+
     }
 
     interface K8sClient extends Serializable {
