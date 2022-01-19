@@ -15,7 +15,6 @@ public class Java16 {
         final LatLng sp = new LatLng(-23.533773, -46.625290);
         sp.print();
 
-        // https://www.latlong.net/place/liverpool-the-uk-28017.html
         final LatLng liverpool = new LatLng(53.400002, -2.983333);
         liverpool.print();
 

@@ -29,6 +29,11 @@ public class Java9 {
 
         // Java 9+: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=127.0.0.1:8000
 
+        // Cacerts location
+
+        // Java 1-8: ${JDK_HOME}/jre/lib/security/cacerts
+
+        // Java 9+: ${JDK_HOME}/lib/security/cacerts
     }
 
     interface K8sClient extends Serializable {

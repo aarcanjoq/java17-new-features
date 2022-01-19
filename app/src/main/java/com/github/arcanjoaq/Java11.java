@@ -24,16 +24,10 @@ public class Java11 {
         // HTTP Client (Standard)
         executeHttpRequest();
 
-        // Transport Layer Security (TLS) 1.3
-        // https://mkyong.com/java/what-is-new-in-java-11/#:~:text=JVMTM%20Tool%20Interface-,14.%20JEP%20332%3A%20Transport%20Layer%20Security%20(TLS)%201.3,-Java%2011%20supports
-
         // Launch Single-File Source-Code Programs
         // https://mkyong.com/java/what-is-new-in-java-11/#:~:text=Poly1305%20encryption%20examples-,12.%20JEP%20330%3A%20Launch%20Single%2DFile%20Source%2DCode%20Programs,-This%20Single%2DFile
 
         // #!/usr/lib/jvm/java-11-openjdk-amd64/bin/java --source 11
-
-        // Flight Recorder
-        // https://mkyong.com/java/what-is-new-in-java-11/#:~:text=Unicode%20in%20Java-,10.%20JEP%20328%3A%20Flight%20Recorder,-Java%20Flight%20Recorder
     }
 
     static void executeHttpRequest() throws IOException, InterruptedException {
