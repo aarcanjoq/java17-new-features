@@ -33,6 +33,7 @@ public class Java16 {
     static void print(Object obj) {
         // Pattern matching for instanceof
         if (obj instanceof String s) {
+            // https://www.journaldev.com/19684/kotlin-type-checking-kotlin-type-casting
             System.out.println(s.toUpperCase());
         }
     }
